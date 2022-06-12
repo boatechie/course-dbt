@@ -1,0 +1,17 @@
+version: 2
+
+models:
+- name: stage_addresses
+  description: user addresses
+- name: stage_events
+  description:   events infor such as user viewing a page, adding an item to cart or checking out.
+- name: stage_order_items
+  description: information items in each order
+- name: stage_orders
+  description:  information about orders
+- name: stage_products
+  description:  products information
+- name: stage_promos
+  description:   promo code info 
+- name: stage_users
+  description: users information
