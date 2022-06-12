@@ -1,10 +1,11 @@
-How many users do we have?
+1. How many users do we have?
+
 select count (distinct user_id) 
 from dbt_emmanuel_ob.stage_users;
 
 answer: 130;
 --------------
-On average, how many orders do we receive per hour?
+2. On average, how many orders do we receive per hour?
 
 with orders_per_hour as (
   select
@@ -16,9 +17,10 @@ with orders_per_hour as (
 select avg(orders)as count_avg_orders_per_hour
 from orders_per_hour
 
-Answer: 7.5208333333333333
+answer: 7.5208333333333333
 --------
-On average, how long does an order take from being placed to being delivered?
+3. On average, how long does an order take from being placed to being delivered?
+
 with orders_delivery_timing as (
   select
   distinct order_id as orders
@@ -28,9 +30,9 @@ with orders_delivery_timing as (
 
 select avg(order_delivery_time)as avg_order_delivery_time
 from orders_delivery_timing;
+answer: 2 days
 --------------
-How many users have only made one purchase? Two purchases? Three+ purchases?
-
+4. How many users have only made one purchase? Two purchases? Three+ purchases?
 
 with base_calc as (
   select distinct user_id, 
@@ -53,7 +55,7 @@ answer: 1 order:25 , 2 orders:28 , 3+ orders:71
 
 -------
 
-On average, how many unique sessions do we have per hour?
+5. On average, how many unique sessions do we have per hour?
 
 with base_calc as 
 (
