@@ -31,7 +31,7 @@ with orders_delivery_timing as (
   distinct order_id as orders
   ,(delivered_at -created_at) as order_delivery_time
   from dbt_emmanuel_ob.stage_orders
-  group by orders,order_delivery_time)
+  where delivered_at is not null)
 
 select avg(order_delivery_time)as avg_order_delivery_time
 from orders_delivery_timing;</code>
