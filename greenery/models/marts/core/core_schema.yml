@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  
+  - name: dim_events_and_products
+    description: source of truth for greenery's products
+    columns:
+      - name: product_id
+        tests:
+        - not_null
+        - unique
+      - name: product_name
+        tests:
+        - not_null
+        - unique
+      - name: price_usd
+        tests:
+          - positive_values
+          - not_null
+      - name: inventory_qty
+        tests:
+          - positive_values        
+ 
+
+  - name: fct_orders
+    description: source of truth for greenery's orders, promos and order locations
+    columns:
+      - name: order_id
+        tests:
+        - not_null
+        - unique
