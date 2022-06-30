@@ -32,10 +32,10 @@ answer: conversion rate :0.62
 answer: int_conversion_rate & int_conversion_rateby_product
 
 ## PART 3: We’re starting to think about granting permissions to our dbt models in our postgres database so that other roles can have access to them.
-answer: a  on- run-end post-hook can be found added within tjr dbt_project.yml file
+answer: a  on- run-end post-hook can be found added within the dbt_project.yml file
 
 ## PART 4:  After learning about dbt packages, we want to try one out and apply some macros or tests. Install a package (i.e. dbt-utils, dbt-expectations) and apply one or more of the macros to your project
-answer: within packages.yml you can see the dbt_utils package latest bversion installed
+answer: within packages.yml you can see the dbt_utils package latest version installed
 
 ## PART 5: After improving our project with all the things that we have learned about dbt, we want to show off our work!
 
